@@ -1,0 +1,28 @@
+Command to run 3 docker containers
+docker run --name hazel_1 -e HZ_NETWORK_PUBLICADDRESS=localhost:5701 -p 5701:5701 hazelcast/hazelcast:latest-snapshot-slim
+docker run --name hazel_2 -e HZ_NETWORK_PUBLICADDRESS=localhost:5702 -p 5702:5701 hazelcast/hazelcast:latest-snapshot-slim
+docker run --name hazel_3 -e HZ_NETWORK_PUBLICADDRESS=localhost:5703 -p 5703:5701 hazelcast/hazelcast:latest-snapshot-slim
+
+
+1 way counter_update_without_locks
+Start at 16:32:36
+Completed by 0:0 minutes at 16:32:37. Whole seconds is 0
+Counter after all equal to 158
+
+
+2 way with pessimistic_update_method
+Start at 16:22:42
+Completed by 8:13 minutes at 16:30:55. Whole seconds is 493
+Counter after all equal to 100000
+
+
+3 way with optimistic_update_method
+Start at 16:33:06
+Completed by 6:31 minutes at 16:39:37. Whole seconds is 391
+Counter after all equal to 100000
+
+
+4 way with AtomicLong
+Start at 17:05:43
+Completed by 1:33 minutes at 17:07:16. Whole seconds is 93
+Counter after all equal to 100000
