@@ -6,7 +6,7 @@ networks:
 
 services:
   hazelcast_1:
-    image: hazelcast/hazelcast:latest
+    image: hazelcast/hazelcast:latest-snapshot-slim
     ports:
       - "5701:5701"
     environment:
@@ -15,7 +15,7 @@ services:
       - hazelcast-network
 
   hazelcast_2:
-    image: hazelcast/hazelcast:latest
+    image: hazelcast/hazelcast:latest-snapshot-slim
     ports:
       - "5702:5701"
     environment:
@@ -24,7 +24,7 @@ services:
       - hazelcast-network
 
   hazelcast_3:
-    image: hazelcast/hazelcast:latest
+    image: hazelcast/hazelcast:latest-snapshot-slim
     ports:
       - "5703:5701"
     environment:
