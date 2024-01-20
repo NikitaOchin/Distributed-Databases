@@ -1,0 +1,29 @@
+1 way: lost_update
+Start at 13:28:58
+Completed by 5:8 minutes at 13:34:06. Whole seconds is 308
+Counter equal to 10092
+
+
+
+
+
+2 way: in_place_update
+Start at 13:34:06
+Completed by 4:47 minutes at 13:38:53. Whole seconds is 287
+Counter equal to 100000
+
+
+
+
+3 way: row_level_locking
+Start at 13:38:53
+Completed by 6:30 minutes at 13:45:24. Whole seconds is 390
+Counter equal to 100000
+
+
+
+
+4 way: optimistic_concurrency_control
+Start at 13:45:24
+Completed by 41:7 minutes at 14:26:32. Whole seconds is 2467
+Counter equal to 100000
