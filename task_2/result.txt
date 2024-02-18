@@ -1,9 +1,3 @@
-Command to run 3 docker containers
-docker run --name hazel_1 -e HZ_NETWORK_PUBLICADDRESS=localhost:5701 -p 5701:5701 hazelcast/hazelcast:latest-snapshot-slim
-docker run --name hazel_2 -e HZ_NETWORK_PUBLICADDRESS=localhost:5702 -p 5702:5701 hazelcast/hazelcast:latest-snapshot-slim
-docker run --name hazel_3 -e HZ_NETWORK_PUBLICADDRESS=localhost:5703 -p 5703:5701 hazelcast/hazelcast:latest-snapshot-slim
-
-
 1 way counter_update_without_locks
 Start at 16:32:36
 Completed by 0:0 minutes at 16:32:37. Whole seconds is 0
