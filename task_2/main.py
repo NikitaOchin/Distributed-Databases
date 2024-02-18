@@ -1,7 +1,6 @@
 import hazelcast
 from threading import Thread
 import time
-from hazelcast.config import Config
 
 
 def counter_update_without_locks(key, map):

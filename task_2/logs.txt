@@ -1,0 +1,98 @@
+PS C:\Users\User\PycharmProjects\Data Engineering UKU\Distributed Databases\task_2> docker run my-custom-hazelcast
+########################################
+# JAVA=/usr/bin/java
+# JAVA_OPTS=--add-modules java.se --add-exports java.base/jdk.internal.ref=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.nio.ch=ALL-UNNAMED --add-opens java.management/sun.man
+agement=ALL-UNNAMED --add-opens jdk.management/com.sun.management.internal=ALL-UNNAMED -Dhazelcast.logging.type=log4j2 -Dlog4j.configurationFile=file:/opt/hazelcast/config/log4j2.properties -Dhazelcast.config=/o
+pt/hazelcast/config/hazelcast-docker.xml -Djet.custom.lib.dir=/opt/hazelcast/custom-lib -Djava.net.preferIPv4Stack=true -XX:MaxRAMPercentage=80.0 -XX:MaxGCPauseMillis=5
+# CLASSPATH=/opt/hazelcast/*:/opt/hazelcast/lib:/opt/hazelcast/lib/*:/opt/hazelcast/bin/user-lib:/opt/hazelcast/bin/user-lib/*
+########################################
+2024-02-18 19:26:29,804 [ INFO] [main] [c.h.i.c.AbstractConfigLocator]: Loading configuration '/opt/hazelcast/config/hazelcast-docker.xml' from System property 'hazelcast.config'
+2024-02-18 19:26:29,807 [ INFO] [main] [c.h.i.c.AbstractConfigLocator]: Using configuration file at /opt/hazelcast/config/hazelcast-docker.xml
+2024-02-18 19:26:30,346 [ INFO] [main] [c.h.s.logo]: [172.17.0.2]:5701 [dev] [5.3.6]
+        +       +  o    o     o     o---o o----o o      o---o     o     o----o o--o--o
+        + +   + +  |    |    / \       /  |      |     /         / \    |         |
+        + + + + +  o----o   o   o     o   o----o |    o         o   o   o----o    |
+        + +   + +  |    |  /     \   /    |      |     \       /     \       |    |
+        +       +  o    o o       o o---o o----o o----o o---o o       o o----o    o
+2024-02-18 19:26:30,347 [ INFO] [main] [c.h.system]: [172.17.0.2]:5701 [dev] [5.3.6] Copyright (c) 2008-2023, Hazelcast, Inc. All Rights Reserved.
+2024-02-18 19:26:30,347 [ INFO] [main] [c.h.system]: [172.17.0.2]:5701 [dev] [5.3.6] Hazelcast Platform 5.3.6 (20231109 - 9903dc9) starting at [172.17.0.2]:5701
+2024-02-18 19:26:30,347 [ INFO] [main] [c.h.system]: [172.17.0.2]:5701 [dev] [5.3.6] Cluster name: dev
+2024-02-18 19:26:30,347 [ INFO] [main] [c.h.system]: [172.17.0.2]:5701 [dev] [5.3.6] Integrity Checker is disabled. Fail-fast on corrupted executables will not be performed. For more information, see the documen
+tation for Integrity Checker.
+2024-02-18 19:26:30,347 [ INFO] [main] [c.h.system]: [172.17.0.2]:5701 [dev] [5.3.6] Jet is enabled
+2024-02-18 19:26:30,634 [ INFO] [main] [c.h.i.t.TpcServerBootstrap]: [172.17.0.2]:5701 [dev] [5.3.6] TPC: disabled
+2024-02-18 19:26:30,859 [ INFO] [main] [c.h.s.security]: [172.17.0.2]:5701 [dev] [5.3.6] Enable DEBUG/FINE log level for log category com.hazelcast.system.security  or use -Dhazelcast.security.recommendations sy
+stem property to see � security recommendations and the status of current config.
+2024-02-18 19:26:30,945 [ INFO] [main] [c.h.i.i.Node]: [172.17.0.2]:5701 [dev] [5.3.6] Using Multicast discovery
+2024-02-18 19:26:30,953 [ INFO] [main] [c.h.c.CPSubsystem]: [172.17.0.2]:5701 [dev] [5.3.6] CP Subsystem is enabled with 3 members.
+2024-02-18 19:26:31,416 [ INFO] [main] [c.h.j.i.JetServiceBackend]: [172.17.0.2]:5701 [dev] [5.3.6] Setting number of cooperative threads and default parallelism to 12
+2024-02-18 19:26:31,535 [ INFO] [main] [c.h.i.d.Diagnostics]: [172.17.0.2]:5701 [dev] [5.3.6] Diagnostics disabled. To enable add -Dhazelcast.diagnostics.enabled=true to the JVM arguments.
+2024-02-18 19:26:31,544 [ INFO] [main] [c.h.c.LifecycleService]: [172.17.0.2]:5701 [dev] [5.3.6] [172.17.0.2]:5701 is STARTING
+2024-02-18 19:26:33,873 [ INFO] [main] [c.h.i.c.ClusterService]: [172.17.0.2]:5701 [dev] [5.3.6]
+
+Members {size:1, ver:1} [
+        Member [172.17.0.2]:5701 - bd5ea83a-c772-40fd-9cb1-a8101b016d01 this
+]
+
+2024-02-18 19:26:33,894 [ INFO] [main] [c.h.j.i.JobCoordinationService]: [172.17.0.2]:5701 [dev] [5.3.6] Jet started scanning for jobs
+2024-02-18 19:26:33,904 [ INFO] [main] [c.h.c.LifecycleService]: [172.17.0.2]:5701 [dev] [5.3.6] [172.17.0.2]:5701 is STARTED
+2024-02-18 19:26:34,358 [ INFO] [hz.eager_edison.cached.thread-2] [c.h.c.i.MetadataRaftGroupManager]: [172.17.0.2]:5701 [dev] [5.3.6] CP Subsystem is waiting for 3 members to join the cluster. Current member cou
+nt: 1
+2024-02-18 19:26:34,631 [ INFO] [hz.eager_edison.IO.thread-in-0] [c.h.i.s.t.TcpServerConnection]: [172.17.0.2]:5701 [dev] [5.3.6] Initialized new cluster connection between /172.17.0.2:5701 and /172.17.0.3:38585
+2024-02-18 19:26:36,786 [ INFO] [hz.eager_edison.IO.thread-in-1] [c.h.i.s.t.TcpServerConnection]: [172.17.0.2]:5701 [dev] [5.3.6] Initialized new cluster connection between /172.17.0.2:5701 and /172.17.0.4:34867
+2024-02-18 19:26:39,361 [ INFO] [hz.eager_edison.cached.thread-1] [c.h.c.i.MetadataRaftGroupManager]: [172.17.0.2]:5701 [dev] [5.3.6] CP Subsystem is waiting for 3 members to join the cluster. Current member cou
+nt: 1
+2024-02-18 19:26:41,876 [ INFO] [hz.eager_edison.generic-operation.thread-5] [c.h.i.c.ClusterService]: [172.17.0.2]:5701 [dev] [5.3.6]
+
+Members {size:3, ver:3} [
+        Member [172.17.0.2]:5701 - bd5ea83a-c772-40fd-9cb1-a8101b016d01 this
+        Member [172.17.0.3]:5701 - 5a601d53-92c6-4ea4-a670-4b45c0f4cca2
+        Member [172.17.0.4]:5701 - f2d92ad5-7d8a-4877-b0f1-11757926607f
+]
+
+2024-02-18 19:26:42,141 [ INFO] [hz.eager_edison.partition-operation.thread-0] [c.h.i.p.i.PartitionStateManager]: [172.17.0.2]:5701 [dev] [5.3.6] Initializing cluster partition table arrangement...
+2024-02-18 19:26:42,364 [ INFO] [hz.eager_edison.cached.thread-2] [c.h.c.i.RaftInvocationManager]: [172.17.0.2]:5701 [dev] [5.3.6] Replaced CPMembersContainer{version=CPMembersVersion{groupIdSeed=0, version=-1},
+ members=[]} with CPMembersContainer{version=CPMembersVersion{groupIdSeed=0, version=0}, members=[CPMember{uuid=bd5ea83a-c772-40fd-9cb1-a8101b016d01, address=[172.17.0.2]:5701}, CPMember{uuid=f2d92ad5-7d8a-4877-
+b0f1-11757926607f, address=[172.17.0.4]:5701}, CPMember{uuid=5a601d53-92c6-4ea4-a670-4b45c0f4cca2, address=[172.17.0.3]:5701}]}
+2024-02-18 19:26:42,372 [ INFO] [hz.eager_edison.cached.thread-2] [c.h.c.i.RaftService]: [172.17.0.2]:5701 [dev] [5.3.6] RaftNode[CPGroupId{name='METADATA', seed=0, groupId=0}] is created with [RaftEndpoint{uuid
+='bd5ea83a-c772-40fd-9cb1-a8101b016d01'}, RaftEndpoint{uuid='f2d92ad5-7d8a-4877-b0f1-11757926607f'}, RaftEndpoint{uuid='5a601d53-92c6-4ea4-a670-4b45c0f4cca2'}]
+2024-02-18 19:26:42,374 [ INFO] [hz.eager_edison.partition-operation.thread-0] [c.h.c.i.r.i.RaftNode(METADATA)]: [172.17.0.2]:5701 [dev] [5.3.6] Status is set to: ACTIVE
+2024-02-18 19:26:44,638 [ INFO] [hz.eager_edison.partition-operation.thread-0] [c.h.c.i.r.i.h.PreVoteRequestHandlerTask(METADATA)]: [172.17.0.2]:5701 [dev] [5.3.6] Granted pre-vote for PreVoteRequest{candidate=R
+aftEndpoint{uuid='5a601d53-92c6-4ea4-a670-4b45c0f4cca2'}, nextTerm=1, lastLogTerm=0, lastLogIndex=0}
+2024-02-18 19:26:44,645 [ INFO] [hz.eager_edison.partition-operation.thread-0] [c.h.c.i.r.i.h.VoteRequestHandlerTask(METADATA)]: [172.17.0.2]:5701 [dev] [5.3.6] Moving to new term: 1 from current term: 0 after V
+oteRequest{candidate=RaftEndpoint{uuid='5a601d53-92c6-4ea4-a670-4b45c0f4cca2'}, term=1, lastLogTerm=0, lastLogIndex=0, disruptive=false}
+2024-02-18 19:26:44,645 [ INFO] [hz.eager_edison.partition-operation.thread-0] [c.h.c.i.r.i.RaftNode(METADATA)]: [172.17.0.2]:5701 [dev] [5.3.6]
+
+CP Group Members {groupId: METADATA(0), size:3, term:1, logIndex:0} [
+        CPMember{uuid=bd5ea83a-c772-40fd-9cb1-a8101b016d01, address=[172.17.0.2]:5701} - FOLLOWER this
+        CPMember{uuid=f2d92ad5-7d8a-4877-b0f1-11757926607f, address=[172.17.0.4]:5701}
+        CPMember{uuid=5a601d53-92c6-4ea4-a670-4b45c0f4cca2, address=[172.17.0.3]:5701}
+]
+
+2024-02-18 19:26:44,645 [ INFO] [hz.eager_edison.partition-operation.thread-0] [c.h.c.i.r.i.h.VoteRequestHandlerTask(METADATA)]: [172.17.0.2]:5701 [dev] [5.3.6] Granted vote for VoteRequest{candidate=RaftEndpoin
+t{uuid='5a601d53-92c6-4ea4-a670-4b45c0f4cca2'}, term=1, lastLogTerm=0, lastLogIndex=0, disruptive=false}
+2024-02-18 19:26:44,654 [ INFO] [hz.eager_edison.partition-operation.thread-0] [c.h.c.i.r.i.h.AppendRequestHandlerTask(METADATA)]: [172.17.0.2]:5701 [dev] [5.3.6] Setting leader: RaftEndpoint{uuid='5a601d53-92c6
+-4ea4-a670-4b45c0f4cca2'}
+2024-02-18 19:26:44,654 [ INFO] [hz.eager_edison.partition-operation.thread-0] [c.h.c.i.r.i.RaftNode(METADATA)]: [172.17.0.2]:5701 [dev] [5.3.6]
+
+CP Group Members {groupId: METADATA(0), size:3, term:1, logIndex:0} [
+        CPMember{uuid=bd5ea83a-c772-40fd-9cb1-a8101b016d01, address=[172.17.0.2]:5701} - FOLLOWER this
+        CPMember{uuid=f2d92ad5-7d8a-4877-b0f1-11757926607f, address=[172.17.0.4]:5701}
+        CPMember{uuid=5a601d53-92c6-4ea4-a670-4b45c0f4cca2, address=[172.17.0.3]:5701} - LEADER
+]
+
+2024-02-18 19:26:44,831 [ INFO] [hz.eager_edison.partition-operation.thread-0] [c.h.c.i.RaftInvocationManager]: [172.17.0.2]:5701 [dev] [5.3.6] Replaced CPMembersContainer{version=CPMembersVersion{groupIdSeed=0,
+ version=0}, members=[CPMember{uuid=bd5ea83a-c772-40fd-9cb1-a8101b016d01, address=[172.17.0.2]:5701}, CPMember{uuid=f2d92ad5-7d8a-4877-b0f1-11757926607f, address=[172.17.0.4]:5701}, CPMember{uuid=5a601d53-92c6-4
+ea4-a670-4b45c0f4cca2, address=[172.17.0.3]:5701}]} with CPMembersContainer{version=CPMembersVersion{groupIdSeed=0, version=2}, members=[CPMember{uuid=bd5ea83a-c772-40fd-9cb1-a8101b016d01, address=[172.17.0.2]:5
+701}, CPMember{uuid=f2d92ad5-7d8a-4877-b0f1-11757926607f, address=[172.17.0.4]:5701}, CPMember{uuid=5a601d53-92c6-4ea4-a670-4b45c0f4cca2, address=[172.17.0.3]:5701}]}
+2024-02-18 19:26:44,946 [ INFO] [hz.eager_edison.partition-operation.thread-0] [c.h.c.i.RaftInvocationManager]: [172.17.0.2]:5701 [dev] [5.3.6] Replaced CPMembersContainer{version=CPMembersVersion{groupIdSeed=0,
+ version=2}, members=[CPMember{uuid=bd5ea83a-c772-40fd-9cb1-a8101b016d01, address=[172.17.0.2]:5701}, CPMember{uuid=f2d92ad5-7d8a-4877-b0f1-11757926607f, address=[172.17.0.4]:5701}, CPMember{uuid=5a601d53-92c6-4
+ea4-a670-4b45c0f4cca2, address=[172.17.0.3]:5701}]} with CPMembersContainer{version=CPMembersVersion{groupIdSeed=0, version=3}, members=[CPMember{uuid=bd5ea83a-c772-40fd-9cb1-a8101b016d01, address=[172.17.0.2]:5
+701}, CPMember{uuid=f2d92ad5-7d8a-4877-b0f1-11757926607f, address=[172.17.0.4]:5701}, CPMember{uuid=5a601d53-92c6-4ea4-a670-4b45c0f4cca2, address=[172.17.0.3]:5701}]}
+2024-02-18 19:26:44,966 [ INFO] [hz.eager_edison.cached.thread-2] [c.h.c.i.MetadataRaftGroupManager]: [172.17.0.2]:5701 [dev] [5.3.6] CP Subsystem is initialized with: [CPMember{uuid=bd5ea83a-c772-40fd-9cb1-a810
+1b016d01, address=[172.17.0.2]:5701}, CPMember{uuid=f2d92ad5-7d8a-4877-b0f1-11757926607f, address=[172.17.0.4]:5701}, CPMember{uuid=5a601d53-92c6-4ea4-a670-4b45c0f4cca2, address=[172.17.0.3]:5701}]
+2024-02-18 19:26:44,967 [ INFO] [hz.eager_edison.partition-operation.thread-0] [c.h.c.i.RaftInvocationManager]: [172.17.0.2]:5701 [dev] [5.3.6] Replaced CPMembersContainer{version=CPMembersVersion{groupIdSeed=0,
+ version=3}, members=[CPMember{uuid=bd5ea83a-c772-40fd-9cb1-a8101b016d01, address=[172.17.0.2]:5701}, CPMember{uuid=f2d92ad5-7d8a-4877-b0f1-11757926607f, address=[172.17.0.4]:5701}, CPMember{uuid=5a601d53-92c6-4
+ea4-a670-4b45c0f4cca2, address=[172.17.0.3]:5701}]} with CPMembersContainer{version=CPMembersVersion{groupIdSeed=0, version=4}, members=[CPMember{uuid=bd5ea83a-c772-40fd-9cb1-a8101b016d01, address=[172.17.0.2]:5
+701}, CPMember{uuid=f2d92ad5-7d8a-4877-b0f1-11757926607f, address=[172.17.0.4]:5701}, CPMember{uuid=5a601d53-92c6-4ea4-a670-4b45c0f4cca2, address=[172.17.0.3]:5701}]}
+
