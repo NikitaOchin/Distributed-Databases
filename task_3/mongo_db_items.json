@@ -1,0 +1,142 @@
+1.
+[{
+  "_id": {
+    "$oid": "65da18948caa7446dde2f031"
+  },
+  "category": "Phone",
+  "model": "iPhone 6",
+  "producer": "Apple",
+  "price": 600,
+  "newField": "usual product"
+},
+{
+  "_id": {
+    "$oid": "65da18948caa7446dde2f032"
+  },
+  "category": "Laptop",
+  "model": "MacBook Pro",
+  "producer": "Apple",
+  "price": 2400,
+  "newField": "expensive product"
+},
+{
+  "_id": {
+    "$oid": "65da18948caa7446dde2f033"
+  },
+  "category": "Washing machine",
+  "model": "LX-57348",
+  "producer": "LG",
+  "price": 750,
+  "newField": "usual product"
+},
+{
+  "_id": {
+    "$oid": "65da18948caa7446dde2f034"
+  },
+  "category": "TV",
+  "model": "SM-LED-FULL-PLUS",
+  "producer": "Samsung",
+  "price": 4200,
+  "newField": "expensive product"
+}]
+
+2. {}
+
+3. Підрахуйте скільки товарів у певної категорії
+[
+  {
+    $match: {
+      category: "Phone",
+    },
+  },
+  {
+    $count:
+      "Phone amount",
+  },
+]
+
+4. Підрахуйте скільки є різних категорій товарів
+[
+  {
+    $group:
+      {
+        _id: "$category",
+      },
+  },
+  {
+    $count:
+      "Unique Categories",
+  },
+]
+
+5. Виведіть список всіх виробників товарів без повторів
+[
+  {
+    $group: {
+      _id: "$producer",
+    },
+  },
+]
+
+6.
+  a. {price: {$lte: 1000}, price: {$gte: 500}}
+  b. {$or: [{ model:'iPhone 6'}, {model: "MacBook Pro"}]}
+  c. {producer: {$in: ['Apple', 'Samsung']}}
+
+
+
+7. Оновить певні товари, змінивши існуючі значення і додайте нові властивості (характеристики) усім товарам за певним критерієм
+
+The same field
+[
+  {
+    $addFields: {
+      price: {
+        $cond: {
+          if: {
+            $gte: ["$price", 1000],
+          },
+          then: {$multiply:["$price", 1.1]},
+          else: {$multiply:["$price", 1.7]},
+        },
+      },
+    },
+  },
+]
+
+Add one another field by condition base on other field
+[
+  {
+    $addFields: {
+      newField: {
+        $cond: {
+          if: {
+            $gte: ["$price", 1000],
+          },
+          then: "expensive product",
+          else: "usual product",
+        },
+      },
+    },
+  },
+]
+
+
+8-9
+Знайдіть товари у яких є (присутнє поле) певні властивості
+Для знайдених товарів збільшіть їх вартість на певну суму
+
+[
+  {
+    $match:
+      {
+        producer: "Apple",
+      },
+  },
+  {
+    $addFields: {
+      price: {$add:["$price", 200]},
+      },
+    },
+]
+
