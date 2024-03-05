@@ -1,7 +1,0 @@
-// Capped collection
-db.runCommand({
-  "create": "feedbacks",
-  "capped": true,
-  "max": 5,
-  "size": 1000000
-})
